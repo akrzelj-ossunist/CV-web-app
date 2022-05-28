@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
 
 const userTable = new mongoose.Schema({
+    id:{
+        type:String,
+        required: true,
+        unique: true,
+    },
     firstName:{
         type:String,
         required: true
@@ -16,7 +21,6 @@ const userTable = new mongoose.Schema({
     email:{
         type:String,
         required: true,
-        unique: true,
     },
     address:{
         type:String,
