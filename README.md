@@ -1,8 +1,8 @@
 CV-web-app
 
 Multi form web application for creating CVs.
-On frontend side of an app you are inputing personal details then you are sending them to 
-backend side of the app where you store it in json file.
+On frontend side of an app you are inputing personal details then sending them to the
+backend side of the app where you store it in mongoDB.
 
 
 For this to run u will need:
