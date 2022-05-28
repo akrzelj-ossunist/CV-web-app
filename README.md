@@ -22,9 +22,12 @@ For this to run u will need:
 5. cors to allow react to send data to node(in node file)
 	 -npm install cors
 
-6. To run node server
+6. mongoose to connect to mongoDB database
+	-npm install mongoose
+
+7. To run node server
 	 -npm run dev
 
-7. To run react
+8. To run react
 	 -npm start
 
