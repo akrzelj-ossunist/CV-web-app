@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
+import App from '../App';
 
 function PrintJobs( {jobs} ){
     return(
@@ -34,6 +35,7 @@ function FormSkills( {object} ) {
         .catch(error => {
           console.log(error)
         })
+        return <App />
     }
   return (
     <div>
