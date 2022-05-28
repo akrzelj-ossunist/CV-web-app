@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');//Generates random id
 const express = require('express')
 const app = express();
 const cors = require('cors');
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.post("/saveUser", function (req, res) {
     //This is how you save data into table in mongoDB
     const addUser = new userTable({
+        id: uuidv4(),
         firstName: req.body.fname,
         lastName: req.body.lname,
         phone: req.body.phone,
