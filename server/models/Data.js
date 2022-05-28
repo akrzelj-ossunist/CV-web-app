@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userData = new mongoose.Schema({
+const userTable = new mongoose.Schema({
     firstName:{
         type:String,
         required: true
@@ -15,7 +15,8 @@ const userData = new mongoose.Schema({
     },
     email:{
         type:String,
-        required: true
+        required: true,
+        unique: true,
     },
     address:{
         type:String,
@@ -24,7 +25,15 @@ const userData = new mongoose.Schema({
     gender:{
         type:String,
         required: false
+    },
+    jobs:{
+        type:Object,
+        required: false
+    },
+    education:{
+        type:Object,
+        required: false
     }
 })
 
-module.exports = mongoose.model('User', userData)
+module.exports = mongoose.model('User', userTable)
